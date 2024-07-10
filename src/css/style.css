@@ -48,10 +48,32 @@ footer{
 .overflow-y-scroll{
     padding-bottom: 0px
 }
+.line-height{
+    line-height: 21px;
+}
 
 .navmenu{
     display: none;
 }
+
+body {
+    height: 2000px;
+    margin: 0;
+}
+
+#header {
+    width: 100%;
+    z-index:2;
+    overflow: auto;
+    background: white;
+    text-align: center;
+    transition: all 0.15s linear;
+}
+
+#header.active {
+     box-shadow: 0 0 10px rgba(0,0,0,0.4);   
+}
+
 
 @media (min-width:1024px) {
    .navmenu{
