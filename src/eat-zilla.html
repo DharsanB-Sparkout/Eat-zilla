@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>Eat Zilla</title>
+
+    <!-- tab icon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/header-logo.svg" />
+
+    <!-- css and responsive-->
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font family  -->
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- carousel cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body >
+
+
+<header class="xl:py-[33px] lg:py-7 md:py-6 sm:py-5 py-4 xl:px-20 lg:px-16 md:px-12 sm:px-7 px-2  bg-white sticky top-0 z-50 shadow-md " >
+    <nav class="block lg:flex 2xl:gap-[147px] xl:gap-28 lg:gap-20 md:gap-14 sm:gap-8 gap-4 lg:justify-between ">
+        <div class="flex justify-between items-center">
+            <div class="flex items-start">
+                <a href="javascript:void(0)">
+                    <img src="images/icons/header-logo.svg" class="img-fluid" alt="eatzilla" width="80" height="40" title="eatzilla">
+                </a>
+            </div>
+            <button type="button" onclick="navbar()" class="flex lg:hidden z-5">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id="navmenu" class="lg:flex lg:justify-between lg:flex-row order-3 2xl:gap-[147px] xl:gap-28 lg:gap-20 md:gap-14 sm:gap-8 gap-4 pt-3 lg:pt-0 navmenu">
+            <form class="flex items-start lg:gap-[15px] sm:gap-3 gap-2 flex-col lg:flex-row relative">
+                <span class="absolute top-0 lg:pt-[18px] sm:pt-4 pt-3 lg:ps-3.5 sm:ps-3 ps-2 left-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                    <path d="M7.33478 0.500003H7.33523C8.41188 0.500067 9.46817 0.788272 10.3923 1.3337C11.3163 1.87911 12.0735 2.66126 12.5843 3.59683C13.0951 4.53236 13.3406 5.58678 13.2954 6.64859C13.2501 7.7104 12.9156 8.74072 12.3269 9.6305L12.3079 9.65916L12.2931 9.69014C12.2845 9.70796 12.2737 9.72481 12.2609 9.74026L12.2601 9.74117L12.1575 9.86517L12.1487 9.87582L12.1405 9.88693C12.0077 10.0667 11.8643 10.2385 11.7111 10.4016L11.7005 10.4129L11.6906 10.4249L7.57537 15.3886C7.57533 15.3886 7.57529 15.3886 7.57526 15.3887C7.54672 15.423 7.51053 15.4511 7.46905 15.4704C7.4275 15.4899 7.38187 15.5 7.3355 15.5L7.33429 15.5C7.28805 15.5001 7.24254 15.4901 7.20104 15.4708C7.15977 15.4516 7.1237 15.4239 7.09515 15.39C7.09501 15.3898 7.09487 15.3896 7.09472 15.3895L2.85667 10.2916L2.85677 10.2915L2.84946 10.2831C2.77499 10.1975 2.68771 10.0923 2.60288 9.9836L2.59822 9.97762L2.59337 9.97178L2.49639 9.85498L2.49572 9.85418C2.48155 9.83719 2.46939 9.8188 2.45939 9.79937L2.444 9.76942L2.42472 9.74181C1.8071 8.85701 1.44618 7.82228 1.38052 6.74973C1.31487 5.67719 1.54694 4.60708 2.05196 3.65523C2.55701 2.70333 3.31596 1.90569 4.24718 1.34925C5.17845 0.792786 6.24622 0.49895 7.33478 0.500003ZM8.95816 3.98743C8.47734 3.66943 7.91258 3.5 7.33526 3.5C6.56123 3.5 5.81789 3.80431 5.26902 4.34759C4.71998 4.89104 4.41059 5.62921 4.41059 6.4C4.41059 6.97471 4.58279 7.53609 4.90481 8.01312C5.22678 8.49009 5.68388 8.86107 6.21771 9.07994C6.75149 9.29879 7.33855 9.35597 7.90488 9.24447C8.47124 9.13296 8.99216 8.8576 9.40151 8.45241C9.81091 8.04718 10.0903 7.53025 10.2035 6.96673C10.3168 6.40317 10.2586 5.81908 10.0366 5.28854C9.81462 4.75806 9.43904 4.30548 8.95816 3.98743Z" fill="#6B7280" stroke="#6B7280"/>
+                  </svg>
+                </span>
+                <select class="border bg-skyblue rounded-lg text-midnight lg:text-base sm:text-sm text-xs font-normal leading-6 lg:py-3.5 sm:py-3 py-2 pl-10 xl:pr-24 lg:pr-20 md:pr-16 sm:pr-12 pr-8 w-full lg:w-auto">
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Tiruppur">Tiruppur</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Madurai">Madurai</option>
+                </select>
+                <div class="flex  items-center md:gap-2.5 gap-2 lg:px-4 px-3 lg:py-[14px] sm:py-3 py-2 rounded-lg border bg-skyblue focus-within:border-dark-cerulean 2xl:w-[384px] w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6.10007 12.2C4.99248 12.2 3.90976 11.8716 2.98884 11.2562C2.06791 10.6409 1.35014 9.76629 0.926282 8.74302C0.502426 7.71976 0.391526 6.59379 0.607606 5.50749C0.823686 4.4212 1.35704 3.42338 2.14022 2.6402C2.92341 1.85703 3.92124 1.32368 5.00755 1.1076C6.09386 0.891528 7.21984 1.00243 8.24312 1.42628C9.2664 1.85013 10.141 2.56789 10.7564 3.48881C11.3717 4.40972 11.7001 5.49242 11.7001 6.6C11.6985 8.0847 11.1079 9.50811 10.0581 10.558C9.00822 11.6078 7.58479 12.1983 6.10007 12.2ZM6.10007 2.4C5.26938 2.4 4.45734 2.64633 3.76665 3.10783C3.07595 3.56933 2.53762 4.22528 2.21973 4.99273C1.90184 5.76018 1.81866 6.60466 1.98072 7.41938C2.14278 8.2341 2.5428 8.98247 3.13018 9.56985C3.71757 10.1572 4.46595 10.5572 5.28068 10.7193C6.09541 10.8814 6.9399 10.7982 7.70736 10.4803C8.47482 10.1624 9.13077 9.62408 9.59228 8.93339C10.0538 8.24271 10.3001 7.43068 10.3001 6.6C10.299 5.48643 9.85614 4.41879 9.06872 3.63138C8.2813 2.84397 7.21365 2.40111 6.10007 2.4Z" fill="#6B7280"/>
+                        <path d="M13.8001 15C13.6145 15 13.4365 14.9262 13.3052 14.7949L10.5052 11.9949C10.3777 11.8629 10.3071 11.6861 10.3087 11.5025C10.3103 11.319 10.3839 11.1434 10.5137 11.0136C10.6435 10.8838 10.8191 10.8102 11.0026 10.8086C11.1862 10.807 11.363 10.8776 11.495 11.0051L14.295 13.8051C14.3929 13.903 14.4596 14.0277 14.4866 14.1635C14.5136 14.2992 14.4997 14.44 14.4467 14.5679C14.3938 14.6957 14.3041 14.8051 14.189 14.882C14.0739 14.9589 13.9386 15 13.8001 15Z" fill="#6B7280"/>
+                    </svg>
+                    <input type="search" placeholder="Search services you want" class="outline-none bg-skyblue  lg:text-base sm:text-sm text-xs lg:placeholder:text-base sm:placeholder:text-sm  placeholder:text-xs leading-6 font-inter placeholder:leading-6 w-full "> 
+                </div>
+            </form>
+            <div class="flex flex-row lg:items-center gap-3   order-3 pt-3 lg:pt-0">
+                <button type="button" class="font-inter lg:px-9 md:px-8 sm:px-7 px-6 border border-white hover:border-litegrey hover:bg-litegrey text-xs sm:text-sm lg:text-base font-medium leading-3 bg-white rounded-lg h-9 md:h-10 xl:h-[45px] w-[117px] shadow-md">Login</button>
+                <button type="button" class="font-inter lg:px-[29px] md:px-7 sm:px-6 px-5 border border-lazygreen hover:border-litegrey rounded-lg text-white bg-lazygreen hover:bg-litegrey text-xs sm:text-sm lg:text-base font-medium leading-3  h-9  md:h-10 lg:h-[45px] w-[117px]">Sign up</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<section class="xl:pt-[25px] lg:pt-6 md:pt-5 pt-4 " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+    <div class="container">
+        <div class="grid grid-cols-12 xl:gap-[23px] lg:gap-12 md:gap-8 sm:gap-7 gap-4">
+            <div class="xl:col-span-9 col-span-12 w-full">
+                <div class="owl-carousel owl-theme">
+                   <div class="item">
+                        <picture>
+                            <source type="image/webp" srcset="images/carousel-image.webp">
+                            <source type="image/jpg" srcset="images/carousel-image.png">
+                            <img loading="lazy" data-src="images/carousel-image.png" width="831" height="431" alt="combo-offer" title="combo-offer" class="img-fluid">
+                        </picture>
+                   </div>
+                   <div class="item">
+                        <picture>
+                            <source type="image/webp" srcset="images/carousel-image.webp">
+                            <source type="image/jpg" srcset="images/carousel-image.png">
+                            <img loading="lazy" data-src="images/carousel-image.png" width="831" height="431" alt="combo-offer" title="combo-offer" class="img-fluid">
+                        </picture>
+                   </div>
+                   <div class="item">
+                        <picture>
+                            <source type="image/webp" srcset="images/carousel-image.webp">
+                            <source type="image/jpg" srcset="images/carousel-image.png">
+                            <img loading="lazy" data-src="images/carousel-image.png" width="831" height="431" alt="combo-offer" title="combo-offer" class="img-fluid">
+                        </picture>
+                   </div>
+                </div>
+            </div>
+            <div class="xl:col-span-3 col-span-12 border-0 rounded-[10px]  pt-[22px] lg:pt-5 ps-[22px] lg:ps-5 bg-liteviolet">
+                <div class="flex items-center gap-[13px] xl:pb-[30px] lg:pb-7 md:pb-6 sm:pb-5 pb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
+                        <path d="M4.7334 1H15.0001" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.7334 6.60022H15.0001" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.7334 12.2001H15.0001" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1V1.01133" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 6.60022V6.61155" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 12.2001V12.2114" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h5 class="font-inter lg:text-xl sm:text-[19px] text-lg font-medium leading-[125%] tracking-[-0.2px] text-liteblack">Categories</h5>
+                </div>
+                <div class=" xl:h-[350px] lg:h-[293px] md:h-64 sm:h-56 h-52 overflow-y-scroll ">
+
+                <div class="flex items-center lg:gap-4 md:gap-3 gap-2 lg:pb-5 md:pb-4 pb-3">
+                    <picture>
+                        <source type="image/webp" srcset="images/bread-and-doughs.webp">
+                        <source type="image/jpg" srcset="images/bread-and-doughs.png">
+                        <img loading="lazy" data-src="images/bread-and-doughs.png" width="50" height="50" alt="combo-offer" title="combo-offer" class="img-fluid">
+                    </picture>
+                    <div>
+                        <h6 class="font-inter text-sm font-semibold leading-[150%]  text-liteblack line-clamp-1">Bread & doughs</h6>
+                        <p class="font-inter text-xs font-normal leading-[150%] text-litegrey">12 Restaurants</p>
+                    </div>
+                </div>
+    
+                <div class="flex items-center lg:gap-4 md:gap-3 gap-2 lg:pb-5 md:pb-4 pb-3">
+                    <picture>
+                        <source type="image/webp" srcset="images/pasta-and-risotto.webp">
+                        <source type="image/jpg" srcset="images/pasta-and-risotto.png">
+                        <img loading="lazy" data-src="images/pasta-and-risotto.png" width="50" height="50" alt="combo-offer" title="combo-offer" class="img-fluid">
+                    </picture>
+                    <div>
+                        <h6 class="font-inter text-sm font-semibold leading-[150%]  text-liteblack line-clamp-1">Pasta & risotto</h6>
+                        <p class="font-inter text-xs font-normal leading-[150%] text-litegrey">21 Restaurants</p>
+                    </div>
+                </div>
+    
+                <div class="flex items-center lg:gap-4 md:gap-3 gap-2 lg:pb-5 md:pb-4 pb-3  ">
+                    <picture>
+                        <source type="image/webp" srcset="images/vegetable-sides.webp">
+                        <source type="image/jpg" srcset="images/vegetable-sides.png">
+                        <img loading="lazy" data-src="images/vegetable-sides.png" width="50" height="50" alt="combo-offer" title="combo-offer" class="img-fluid">
+                    </picture>
+                    <div>
+                        <h6 class="font-inter text-sm font-semibold leading-[150%]  text-liteblack line-clamp-1">Vegetable sides</h6>
+                        <p class="font-inter text-xs font-normal leading-[150%] text-litegrey">05 Restaurants</p>
+                    </div>
+                </div>
+    
+                <div class="flex items-center lg:gap-4 md:gap-3 gap-2 lg:pb-5 md:pb-4 pb-3">
+                    <picture>
+                        <source type="image/webp" srcset="images/sauces-condiments.webp">
+                        <source type="image/jpg" srcset="images/sauces-condiments.png">
+                        <img loading="lazy" data-src="images/sauces-condiments.png" width="50" height="50" alt="combo-offer" title="combo-offer" class="img-fluid">
+                    </picture>
+                    <div>
+                        <h6 class="font-inter text-sm font-semibold leading-[150%]  text-liteblack line-clamp-1">Sauces & condiments</h6>
+                        <p class="font-inter text-xs font-normal leading-[150%] text-litegrey">14 Restaurants</p>
+                    </div>
+                </div>
+    
+                <div class="flex items-center lg:gap-4 md:gap-3 gap-2 lg:pb-5 md:pb-4 pb-3">
+                    <picture>
+                        <source type="image/webp" srcset="images/puddings-desserts.webp">
+                        <source type="image/jpg" srcset="images/puddings-desserts.png">
+                        <img loading="lazy" data-src="images/puddings-desserts.png" width="50" height="50" alt="combo-offer" title="combo-offer" class="img-fluid">
+                    </picture>
+                    <div>
+                        <h6 class="font-inter text-sm font-semibold leading-[150%]  text-liteblack line-clamp-1">Puddings & desserts</h6>
+                        <p class="font-inter text-xs font-normal leading-[150%] text-litegrey">35 Restaurants</p>
+                    </div>
+                </div>
+    
+                <div class="flex items-center lg:gap-4 md:gap-3 gap-2 lg:pb-5 md:pb-4 pb-3">
+                    <picture>
+                        <source type="image/webp" srcset="images/bread-and-doughs.webp">
+                        <source type="image/jpg" srcset="images/bread-and-doughs.png">
+                        <img loading="lazy" data-src="images/bread-and-doughs.png" width="50" height="50" alt="combo-offer" title="combo-offer" class="img-fluid">
+                    </picture>
+                    <div>
+                        <h6 class="font-inter text-sm font-semibold leading-[150%]  text-liteblack line-clamp-1">Bread & doughs</h6>
+                        <p class="font-inter text-xs font-normal leading-[150%] text-litegrey">12 Restaurants</p>
+                    </div>
+                </div>
+    
+                <div class="flex items-center lg:gap-4 md:gap-3 gap-2 lg:pb-5 md:pb-4 pb-3">
+                    <picture>
+                        <source type="image/webp" srcset="images/pasta-and-risotto.webp">
+                        <source type="image/jpg" srcset="images/pasta-and-risotto.png">
+                        <img loading="lazy" data-src="images/pasta-and-risotto.png" width="50" height="50" alt="combo-offer" title="combo-offer" class="img-fluid">
+                    </picture>
+                    <div>
+                        <h6 class="font-inter text-sm font-semibold leading-[150%]  text-liteblack line-clamp-1">Pasta & risotto</h6>
+                        <p class="font-inter text-xs font-normal leading-[150%] text-litegrey">21 Restaurants</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="pt-7 sm:pt-8 md:pt-10  xl:pt-20 lg:pt-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+    <div class="container">
+        <div class="flex justify-between items-center">
+          <h4 class="xl:text-[36px] lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold leading-[125%] tracking-[-0.36px] font-inter">Top Brands for you</h4>
+          <a href="javascript:void(0)" class="text-lazygreen font-inter xl:text-xl lg:text-lg md:text-base text-sm font-medium leading-5 tracking-[-0.5px] ">See all</a>
+        </div>
+        <!-- <div class="lg:flex lg:flex-row lg:items-center lg:justify-center grid grid-cols-12 pt-[30px] lg:pt-7 gap-5 lg:gap-0 "> 
+        
+            <div class="pr-0  sm:pr-[25px] col-span-6 sm:col-span-4 flex flex-col items-center justify-center pb-3 sm:pb-0">
+                <picture>
+                    <source type="image/webp" srcset="images/burger-king.webp">
+                    <source type="image/jpg" srcset="images/burger-king.png">
+                    <img loading="lazy" data-src="images/burger-king.png" width="138" height="138" alt="burger-king" title="burger-king" class="img-fluid">
+                </picture>
+                <div class="flex flex-col items-center lg:pt-5 md:pt-4 pt-3 lg:gap-2.5 sm:gap-2 gap-1.5">
+                    <h6 class="font-inter md:text-sm text-xs font-semibold leading-[150%] text-liteblack line-clamp-1 " >Burger King</h6>
+                    <p class="font-inter md:text-sm text-xs font-normal leading-[150%] text-litegrey line-clamp-1">Buy 1 Get 1 Free</p>
+                </div>
+            </div>
+
+            <div class="pr-0 sm:pr-[25px] col-span-6 sm:col-span-4 flex flex-col items-center justify-center pb-3 sm:pb-0">
+                <picture>
+                    <source type="image/webp" srcset="images/dominos.webp">
+                    <source type="image/jpg" srcset="images/dominos.png">
+                    <img loading="lazy" data-src="images/dominos.png" width="138" height="138" alt="dominos" title="dominos" class="img-fluid">
+                </picture>
+                <div class="flex flex-col items-center lg:pt-5 md:pt-4 pt-3 lg:gap-2.5 sm:gap-2 gap-1.5">
+                    <h6 class="font-inter md:text-sm text-xs font-semibold leading-[150%] text-liteblack line-clamp-1" >Domino’s</h6>
+                    <p class="font-inter md:text-sm text-xs font-normal leading-[150%] text-litegrey line-clamp-1">20% off on Pizza’s</p>
+                </div>
+            </div>
+
+            <div class="pr-0 sm:pr-[25px] col-span-6 sm:col-span-4 flex flex-col items-center justify-center pb-3 sm:pb-0">
+                <picture>
+                    <source type="image/webp" srcset="images/Subway.webp">
+                    <source type="image/jpg" srcset="images/Subway.png">
+                    <img loading="lazy" data-src="images/Subway.png" width="138" height="138" alt="Subway" title="Subway" class="img-fluid">
+                </picture>
+                <div class="flex flex-col items-center lg:pt-5 md:pt-4 pt-3 lg:gap-2.5 sm:gap-2 gap-1.5">
+                    <h6 class="font-inter md:text-sm text-xs font-semibold leading-[150%] text-liteblack line-clamp-1" >Subway</h6>
+                    <p class="font-inter md:text-sm text-xs font-normal leading-[150%] text-litegrey line-clamp-1">10% Off on grills</p>
+                </div>
+            </div>
+
+            <div class="pr-[7px]  col-span-6 sm:col-span-4 flex flex-col items-center justify-center pb-3 sm:pb-0">
+                <picture>
+                    <source type="image/webp" srcset="images/kfc.webp">
+                    <source type="image/jpg" srcset="images/kfc.png">
+                    <img loading="lazy" data-src="images/kfc.png" width="138" height="138" alt="kfc" title="kfc" class="img-fluid">
+                </picture>
+                <div class="flex flex-col items-center lg:pt-5 md:pt-4 pt-3 lg:gap-2.5 sm:gap-2 gap-1.5">
+                    <h6 class="font-inter md:text-sm text-xs font-semibold leading-[150%] text-liteblack line-clamp-1" >KFC</h6>
+                    <p class="font-inter md:text-sm text-xs font-normal leading-[150%] text-litegrey line-clamp-1">Flat 10% Off</p>
+                </div>
+            </div>
+
+            <div class="pr-[7px]  sm:col-span-4 col-span-6 flex flex-col items-center justify-center pb-3 sm:pb-0">
+                <picture>
+                    <source type="image/webp" srcset="images/Haldiram.webp">
+                    <source type="image/jpg" srcset="images/Haldiram.png">
+                    <img loading="lazy" data-src="images/Haldiram.png" width="138" height="138" alt="Haldiram" title="Haldiram" class="img-fluid ">
+                </picture>
+                <div class="flex flex-col items-center lg:pt-5 md:pt-4 pt-3  lg:gap-2.5 sm:gap-2 gap-1.5">
+                    <h6 class="font-inter md:text-sm text-xs font-semibold leading-[150%] text-liteblack line-clamp-1" >Haldirams</h6>
+                    <p class="font-inter md:text-sm text-xs font-normal leading-[150%] text-litegrey text-center">30% Off On Snacks items</p>
+                </div>
+            </div>
+
+            <div class="pr-0 sm:pr-[25px] sm:col-span-4 col-span-6 flex flex-col items-center justify-center pb-3 sm:pb-0">
+                <picture>
+                    <source type="image/webp" srcset="images/taco-bell.webp">
+                    <source type="image/jpg" srcset="images/taco-bell.png">
+                    <img loading="lazy" data-src="images/taco-bell.png" width="138" height="138" alt="taco-bell" title="taco-bell" class="img-fluid">
+                </picture>
+                <div class="flex flex-col items-center lg:pt-5 md:pt-4 pt-3 lg:gap-2.5 sm:gap-2 gap-1.5">
+                    <h6 class="font-inter md:text-sm text-xs font-semibold leading-[150%] text-liteblack line-clamp-1" >Taco Bell</h6>
+                    <p class="font-inter md:text-sm text-xs font-normal leading-[150%] text-litegrey line-clamp-1">Buy 1 Get 1 Free</p>
+                </div>
+            </div>
+
+            <div class="sm:col-span-4 col-span-6 flex flex-col items-center justify-center">
+                <picture>
+                    <source type="image/webp" srcset="images/mc-donalds.webp">
+                    <source type="image/jpg" srcset="images/mc-donalds.png">
+                    <img loading="lazy" data-src="images/mc-donalds.png" width="138" height="138" alt="mc-donald" title="mc-donald" class="img-fluid">
+                </picture>
+                <div class="flex flex-col items-center lg:pt-5 md:pt-4 pt-3 lg:gap-2.5 sm:gap-2 gap-1.5">
+                    <h6 class="font-inter md:text-sm text-xs font-semibold leading-[150%] text-liteblack" >Mc Donald’s</h6>
+                    <p class="font-inter md:text-sm text-xs font-normal leading-[150%] text-litegrey">Buy 1 Get 1 Free</p>
+                </div>
+            </div>
+        
+        </div> -->
+
+
+
+        <div class="grid justify-center grid-cols-12 lg:grid-cols-7 gap-3 sm:gap-4 md:gap-5 lg:gap-[25px] pt-[30px] lg:pt-7 md:pt-6 sm:pt-5">
+                <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-auto">
+                    <picture>
+                        <source type="image/webp" src="images/burger-king.webp">
+                        <source type="image/png" src="images/burger-king.png">
+                        <img src="images/burger-king.png" class="img-fluid md:w-11/12 sm:w-3/4 w-2/3 lg:w-full  mx-auto" alt="burger-king" width="138" height="138" loading="lazy">
+                    </picture>
+                    <p class="font-inter lg:pt-5 md:pt-2 sm:pt-1 pt-0 text-center text-liteblack text-xs md:text-sm font-semibold leading-[21px]">Burger King</p>
+                    <p class="font-inter lg:pt-3 md:pt-2 sm:pt-1 pt-0 text-center text-litegrey text-xs md:text-sm leading-[21px]">Buy 1 Get 1 Free</p>
+                </div>
+                <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-auto">
+                    <picture>
+                        <source type="image/webp" src="images/dominos.webp">
+                        <source type="image/png" src="images/dominos.png">
+                        <img src="images/dominos.png" class="img-fluid md:w-11/12 sm:w-3/4 w-2/3 lg:w-full  mx-auto" alt="dominos" width="138" height="138" loading="lazy">
+                    </picture>
+                    <p class="font-inter lg:pt-5 md:pt-2 sm:pt-1 pt-0  text-center text-liteblack text-xs md:text-sm font-semibold leading-[21px]">Domino’s</p>
+                    <p class="font-inter lg:pt-3 md:pt-2 sm:pt-1 pt-0 text-center text-litegrey text-xs md:text-sm leading-[21px]">20% off on Pizza’s</p>
+                </div>
+                <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-auto">
+                    <picture>
+                        <source type="image/webp" src="images/subway.webp">
+                        <source type="image/png" src="images/subway.png">
+                        <img src="images/subway.png" class="img-fluid md:w-11/12 sm:w-3/4 w-2/3 lg:w-full mx-auto" alt="subway" width="138" height="138" loading="lazy">
+                    </picture>
+                    <p class="font-inter lg:pt-5 md:pt-2 sm:pt-1 pt-0  text-center text-liteblack text-xs md:text-sm font-semibold leading-[21px]">Subway</p>
+                    <p class="font-inter lg:pt-3 md:pt-2 sm:pt-1 pt-0 text-center text-litegrey text-xs md:text-sm leading-[21px]">10% Off on grills</p>
+                </div>
+                <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-auto">
+                    <picture>
+                        <source type="image/webp" src="images/kfc.webp">
+                        <source type="image/png" src="images/kfc.png">
+                        <img src="images/kfc.png" class="img-fluid md:w-11/12 sm:w-3/4 w-2/3 lg:w-full  mx-auto" alt="kfc-bucket" width="138" height="138" loading="lazy">
+                    </picture>
+                    <p class="font-inter lg:pt-5 md:pt-2 sm:pt-1 pt-0  text-center text-liteblack text-xs md:text-sm font-semibold leading-[21px]">KFC</p>
+                    <p class="font-inter lg:pt-3 md:pt-2 sm:pt-1 pt-0 text-center text-litegrey text-xs md:text-sm leading-[21px]">Flat 10% Off</p>
+                </div>
+                <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-auto">
+                    <picture>
+                        <source type="image/webp" src="images/haldiram.webp">
+                        <source type="image/png" src="images/haldiram.png">
+                        <img src="images/haldiram.png" class="img-fluid mx-auto md:w-11/12 sm:w-3/4 w-2/3 lg:w-full " alt="Haldirams" width="138" height="138" loading="lazy" >
+                    </picture>
+                    <p class="font-inter lg:pt-5 md:pt-2 sm:pt-1 pt-0  text-center text-liteblack text-xs md:text-sm font-semibold leading-[21px]">Haldirams</p>
+                    <p class="font-inter lg:pt-3 md:pt-2 sm:pt-1 pt-0 text-center text-litegrey text-xs md:text-sm leading-[21px]">30% Off On Snacks items</p>
+                </div>
+                <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-auto">
+                    <picture>
+                        <source type="image/webp" src="images/taco-bell.webp">
+                        <source type="image/png" src="images/taco-bell.png">
+                        <img src="images/taco-bell.png" class="img-fluid md:w-11/12 sm:w-3/4 w-2/3 lg:w-full  mx-auto" alt="taco-bell" width="138" height="138" loading="lazy">
+                    </picture>
+                    <p class="font-inter lg:pt-5 md:pt-2 sm:pt-1 pt-0  text-center text-liteblack text-xs md:text-sm font-semibold leading-[21px]">Taco Bell</p>
+                    <p class="font-inter lg:pt-3 md:pt-2 sm:pt-1 pt-0 text-center text-litegrey text-xs md:text-sm leading-[21px]">Buy 1 Get 1 Free</p>
+                </div>
+                <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-auto">
+                    <picture>
+                        <source type="image/webp" src="images/mc-donalds.webp">
+                        <source type="image/png" src="images/mc-donalds.png">
+                        <img src="images/mc-donalds.png" class="img-fluid md:w-11/12 sm:w-3/4 w-2/3 lg:w-full mx-auto" alt="mcdonalds" width="138" height="138" loading="lazy">
+                    </picture>
+                    <p class="font-inter lg:pt-5 md:pt-2 sm:pt-1 pt-0  text-center text-liteblack text-xs md:text-sm font-semibold leading-[21px]">Mc Donald’s</p>
+                    <p class="font-inter lg:pt-3 md:pt-2 sm:pt-1 pt-0 text-center text-litegrey text-xs md:text-sm leading-[21px]">Buy 1 Get 1 Free</p>
+                </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="pt-7 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-20 " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+    <div class="container">
+        <div class="grid grid-cols-12 xl:gap-[25px] lg:gap-6 md:gap-5 gap-4 ">
+            <div class="lg:col-span-8 col-span-12">
+                <picture class="rounded-md">
+                    <source type="image/webp" srcset="images/mc-donald.webp">
+                    <source type="image/jpg" srcset="images/mc-donald.png">
+                    <img loading="lazy" data-src="images/mc-donald.png" width="736" height="370" alt="mc-donald" title="mc-donald" class=" w-full img-fluid">
+                </picture>
+            </div>
+            <div class="lg:col-span-4 col-span-12 ">
+                <div class="flex flex-row lg:flex-col xl:gap-6 lg:gap-[23px] md:gap-5 gap-4">
+                    <picture class="w-full" >
+                        <source type="image/webp" srcset="images/domino.webp">
+                        <source type="image/jpg" srcset="images/domino.png">
+                        <img loading="lazy" data-src="images/domino.png" width="355" height="173" alt="domino" title="domino" class="w-full img-fluid">
+                    </picture>
+                    <picture class="w-full" >
+                        <source type="image/webp" srcset="images/kfc-offer.webp">
+                        <source type="image/jpg" srcset="images/kfc-offer.png">
+                        <img loading="lazy" data-src="images/kfc-offer.png" width="355" height="173" alt="kfc-offer" title="kfc-offer" class="w-full img-fluid">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="pt-7 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-20 xl:pb-[70px] md:pb-10 lg:pb-12 sm:pb-8 pb-7" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+    <div class="container">
+        <div class="flex justify-between items-center xl:pb-[30px] lg:pb-7 md:pb-6 sm:pb-5 pb-4">
+          <h4 class="xl:text-[36px] lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold leading-[125%] tracking-[-0.36px] font-inter">Top Restaurants near you</h4>
+          <a href="javascript:void(0)" class="text-lazygreen font-inter xl:text-xl lg:text-lg md:text-base text-sm  font-medium leading-5 tracking-[-0.5px] ">See all</a>
+        </div>
+
+        <div class="grid grid-cols-12 xl:gap-[26px] lg:gap-6  md:gap-5 gap-4 xl:pb-[30px] lg:pb-6 md:pb-5 pb-4">
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12">
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/annapoorna-and-gowrishankar.webp">
+                        <source type="image/jpg" srcset="images/annapoorna-and-gowrishankar.jpg">
+                        <img loading="lazy" data-src="images/annapoorna-and-gowrishankarjpg" width="259" height="130" alt="annapoorna-and-gowrishankar" title="annapoorna-and-gowrishankar" class="img-fluid w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">Flat 10% OFF</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2  line-clamp-1">Annapoorna & Gowrishankar</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">4.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">Indian cuisine</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">23 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">6 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">Race Course</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12">
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/ss-hydrabad-biriyani.webp">
+                        <source type="image/jpg" srcset="images/ss-hydrabad-biriyani.jpg">
+                        <img loading="lazy" data-src="images/ss-hydrabad-biriyani.jpg" width="259" height="130" alt="ss-hydrabad-biriyani" title="ss-hydrabad-biriyani" class="img-fluid w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">Flat 10% OFF</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2 line-clamp-1">SS Hydrabad Biriyani</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">4.4
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">Multi cuisine Restaurant</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">15 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">4 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">Gandhipuram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12">
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/geetha-canteen.webp">
+                        <source type="image/jpg" srcset="images/geetha-canteen.jpg">
+                        <img loading="lazy" data-src="images/geetha-canteenjpg" width="259" height="130" alt="geetha-canteen" title="geetha-canteen" class="img-fluid  w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">Flat 10% OFF</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2 line-clamp-1">Geetha Canteen</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">3.9
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">South Indian Restaurant</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">20 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">4 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">North Coimbatore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12">
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/kowloon.webp">
+                        <source type="image/jpg" srcset="images/kowloon.jpg">
+                        <img loading="lazy" data-src="images/kowloonjpg" width="259" height="130" alt="kowloon" title="kowloon" class="img-fluid w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">Flat 10% OFF</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2 line-clamp-1">Kowloon</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">4.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">Chinese Restaurant</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">40 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">6 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">Saibaba colony</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="grid grid-cols-12 xl:gap-[26px] lg:gap-6  md:gap-5 gap-4">
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12">
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/Chinese-wok.webp">
+                        <source type="image/jpg" srcset="images/Chinese-wok.jpg">
+                        <img loading="lazy" data-src="images/Chinese-wokjpg" width="259" height="130" alt="Chinese-wok" title="Chinese-wok" class="img-fluid w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">Flat 10% OFF</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2 line-clamp-1">Chinese Wok</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">4.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">Chinese, Asian, Tibetan, Desserts</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">53 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">4 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">R.S Puram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12"> 
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/pizza-hut.webp">
+                        <source type="image/jpg" srcset="images/pizza-hut.jpg">
+                        <img loading="lazy" data-src="images/pizza-hut.jpg" width="259" height="130" alt="pizza-hut" title="pizza-hut" class="img-fluid w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">Free Delivery</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2 line-clamp-1">Pizza Hut</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">4.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">Pizzas</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">23 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">6 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">R.S Puram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12">
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/barbeque-nation.webp">
+                        <source type="image/jpg" srcset="images/barbeque-nation.jpg">
+                        <img loading="lazy" data-src="images/barbeque-nationjpg" width="259" height="130" alt="barbeque-nation" title="barbeque-nation" class="img-fluid w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">10% OFF on Orders up to ₹500</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2 line-clamp-1">UBQ by Barbeque Nation</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">4.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">North Indian, Barbecue, Biryani</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">50 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">6 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">Peelamedu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-3 sm:col-span-6 col-span-12">
+                <div class="relative">
+                    <picture class="rounded-md">
+                        <source type="image/webp" srcset="images/hmr-biriyani.webp">
+                        <source type="image/jpg" srcset="images/hmr-biriyani.jpg">
+                        <img loading="lazy" data-src="images/hmr-biriyanijpg" width="259" height="130" alt="hmr-biriyani" title="hmr-biriyani" class="img-fluid w-full rounded-md">
+                    </picture>
+                    <div class="overlay"></div>
+                    <p class="text-white font-inter text-xs font-bold leading-[150%] absolute bottom-[6px] left-[6px]">Flat 10% OFF</p>
+                </div>
+                <div>
+                    <h4 class="text-liteblack font-inter md:text-base text-sm font-semibold leading-[150%] lg:py-2.5 py-2 line-clamp-1" >HMR - Biriyani Hut</h4>
+                    <div class="flex items-center lg:gap-2.5 gap-2 lg:pb-2 pb-1.5">
+                        <div class="text-white font-poppins text-[9px] rounded-[4px] bg-lazygreen flex items-center px-1 pt-px">4.0
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <g clip-path="url(#clip0_371_224)">
+                                  <path d="M5.51718 7.48092C5.4068 7.42275 5.27484 7.42269 5.1644 7.48076L3.29317 8.46458C3.01535 8.61065 2.69063 8.37472 2.7437 8.06536L3.10116 5.98149C3.12225 5.85855 3.08145 5.73311 2.99206 5.6461L1.47637 4.17072C1.25132 3.95166 1.37538 3.56962 1.6862 3.52457L3.77718 3.22153C3.90058 3.20365 4.00727 3.12616 4.06245 3.01435L4.99815 1.1184C5.13706 0.836929 5.53842 0.83693 5.67734 1.1184L6.61303 3.01435C6.66821 3.12616 6.77491 3.20365 6.89831 3.22153L8.98928 3.52457C9.3001 3.56962 9.42417 3.95166 9.19912 4.17072L7.68342 5.6461C7.59404 5.73311 7.55323 5.85855 7.57432 5.98149L7.93164 8.06446C7.98473 8.37399 7.65968 8.60993 7.38184 8.46352L5.51718 7.48092Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_371_224">
+                                    <rect width="10.6036" height="9.84615" fill="white" transform="translate(0.0371094 0.0532227)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-greyish font-inter text-xs font-medium leading-[150%] line-clamp-1">Biryani, Indian</p>
+                    </div>
+                    <div class="flex items-center lg:gap-2.5 gap-2">
+                        <div class="flex items-center gap-[3px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.51333 14.5241C11.2562 14.5241 13.4798 12.3005 13.4798 9.55765C13.4798 6.81475 11.2562 4.59119 8.51333 4.59119C5.77043 4.59119 3.54688 6.81475 3.54688 9.55765C3.54688 12.3005 5.77043 14.5241 8.51333 14.5241Z" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.51367 7.42926V9.55774H9.93266" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.96478 3.17236L3.01367 4.59135" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0605 3.17233L14.0117 4.59132" stroke="#008352" stroke-width="1.41899" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-lazygreen font-inter text-xs font-semibold leading-[13px] tracking-[-0.317px]">25 mins</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px] ">8 km</p>
+                            <span class=" border-r border-litegrey rounded-[3px] h-[9px]"></span>
+                            <p class="text-litegrey font-inter text-[10px] font-medium leading-[13px] tracking-[-0.317px]">Ramanathapuram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<footer class="p-5">
+    <div class="container">
+        <p class="text-white xl:text-lg lg:texy-[17px] md:text-base text-sm flex justify-center font-inter">All rights reserved by The Eat Zilla.</p>
+    </div>  
+</footer>
+
+
+  <!-- caruosel cdn  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+<script>  
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        autoplay: true,
+        margin:24,
+        nav:false,
+        dots:false,
+        responsive:{
+          0:{
+            items:1
+          },
+
+        }
+      })
+    })  
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script> AOS.init(); </script>
+
+<script>
+    function navbar(){
+        document.getElementById("navmenu").classList.toggle("navmenu");
+    }
+</script>
+
+
+
+
+</body>
+</html>
